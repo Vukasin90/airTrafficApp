@@ -1,0 +1,17 @@
+@mixin clear-fix {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+@mixin mq($width) {
+    @media (max-width: $width) {
+    @content;
+    }
+}
+
+@mixin mq-L($width) {
+    @media (min-width: $width) {
+    @content;
+    }
+}

@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+  @media (max-width: 1190px) {
+    .container {
+      padding: 0 5%; } }
+
+#loader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; }
+
+#loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3B5998;
+  /* $blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; }
+
+.loader-msg {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+  margin-top: 20px; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.flights-data-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.flight-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  min-width: 300px;
+  height: 100px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer; }
+  .flight-card span {
+    display: block; }
+  .flight-card img {
+    margin-right: 20px; }
+
+.welcome {
+  text-align: center;
+  margin: 100px 0; }
+  .welcome h1 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
+    text-transform: uppercase; }
+  .welcome p {
+    color: #fff;
+    display: block;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 5px; }
+
+.button_base {
+  display: inline-block;
+  margin-top: 55px;
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default; }
+
+.button_base:hover {
+  cursor: pointer; }
+
+.b07_3d_double_roll {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; }
+
+.b07_3d_double_roll div {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  border: #000000 solid 1px;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+.b07_3d_double_roll div:nth-child(1) {
+  color: #000000;
+  background-color: #ffffff;
+  z-index: 0;
+  width: 100%;
+  height: 50px;
+  clip: rect(0px, 100px, 50px, 0px);
+  position: absolute;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px; }
+
+.b07_3d_double_roll div:nth-child(2) {
+  color: #000000;
+  background-color: #3B5998;
+  z-index: -1;
+  width: 100%;
+  height: 50px;
+  clip: rect(0px, 100px, 50px, 0px);
+  position: absolute;
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px; }
+
+.b07_3d_double_roll div:nth-child(3) {
+  color: #000000;
+  background-color: #ffffff;
+  z-index: 0;
+  width: 100%;
+  height: 50px;
+  clip: rect(0px, 200px, 50px, 100px);
+  position: absolute;
+  transition: all 0.2s ease 0.1s;
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px; }
+
+.b07_3d_double_roll div:nth-child(4) {
+  color: #000000;
+  background-color: #3B5998;
+  z-index: -1;
+  width: 100%;
+  height: 50px;
+  clip: rect(0px, 200px, 50px, 100px);
+  position: absolute;
+  transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transition: all 0.2s ease 0.1s;
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  transform-origin: 50% 50% -25px;
+  -webkit-transform-origin: 50% 50% -25px;
+  -moz-transform-origin: 50% 50% -25px; }
+
+.b07_3d_double_roll:hover div:nth-child(1) {
+  background-color: #000000;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg); }
+
+.b07_3d_double_roll:hover div:nth-child(2) {
+  color: #ffffff;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg); }
+
+.b07_3d_double_roll:hover div:nth-child(3) {
+  background-color: #000000;
+  transition: all 0.2s ease 0.1s;
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  transform: rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg); }
+
+.b07_3d_double_roll:hover div:nth-child(4) {
+  color: #ffffff;
+  transition: all 0.2s ease 0.1s;
+  -webkit-transition: all 0.2s ease 0.1s;
+  -moz-transition: all 0.2s ease 0.1s;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg); }
